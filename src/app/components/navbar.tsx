@@ -2,7 +2,13 @@
 import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 
-const navigation = [
+type NavigationItem = {
+  name: string;
+  href: string;
+  current: boolen | null;
+};
+
+const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: null },
   { name: "Test", href: "/test", current: null },
   { name: "Sign Out", href: "api/auth/signout", current: null}
