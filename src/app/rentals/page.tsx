@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+import Table from '../components/Table';
 
 type DataType = {
   rental_id: number;
@@ -24,33 +25,7 @@ export default function RentalsPage() {
   
 
   return (
-    <div>
-      <h1>Rentals</h1>
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Rental ID</th>
-            <th>Rental Name</th>
-            <th>Cost</th>
-            <th>Markup Percentage</th>
-            <th>Markup Dollar</th>
-            <th>Final Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item) => (
-            <tr key={item.rental_id}>
-              <td>{item.rental_id}</td>
-              <td>{item.rental_name}</td>
-              <td>{item.cost}</td>
-              <td>{item.markup_percentage}</td>
-              <td>{item.markup_dollar}</td>
-              <td>{item.final_price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <Table data={data}/>
   );
 }
 

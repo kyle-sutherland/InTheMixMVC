@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import pool from '../db'
 import { NextResponse } from 'next/server';
 

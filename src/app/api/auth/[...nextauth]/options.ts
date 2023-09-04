@@ -25,7 +25,7 @@ export const options: NextAuthOptions = {
       async authorize(credentials) {
         //retriev proper user data here.
         //to verify creds. Hard-coed for testing
-        const user = {id: "3", name: "kyle", password: "pass" }
+        const user = {name: process.env.USERNAME, password: process.env.USERSECRET}
 
         if (credentials?.username === user.name && credentials?.password === user.password) {
           return user
